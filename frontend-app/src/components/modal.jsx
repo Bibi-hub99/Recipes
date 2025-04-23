@@ -9,9 +9,11 @@ function Modal(props){
         ReactDOM.createPortal(
         <>
             {props.viewImage && <div className={'fixed h-full w-full top-0'} style={{backgroundColor:'rgba(0,0,0,0.8)'}}>
-                <div className={'relative h-[90%] bg-white top-[10%] rounded-lg pt-5 border-box md:w-[70%] md:top-[5%] m-auto lg:w-[50%] lg:h-[70%] lg:top-[15%]'} style={{zIndex:'17'}}>
-                    <button className={'relative left-1 -top-5 text-[1.9rem] px-2 hover:bg-slate-100 py-2 rounded-lg'} onClick={props.handleCloseImage}>{closeIcon}</button>
-                    <img src={props.image} className={'absolute inset-0'}></img>
+                <div className={'relative m-auto h-[90%] bg-white top-[5%] md:w-[70%] xl:w-[50%] rounded-lg'} style={{zIndex:'17'}}>
+                    <button className={'relative left-1 top-0 text-[1.9rem] px-2 hover:bg-slate-100 py-2 rounded-lg'} style={{zIndex:'17'}} onClick={props.handleCloseImage}>{closeIcon}</button>
+                    <div className={'absolute left-0 right-0 top-0 bottom-0 rounded-lg'}>
+                        <img src={props.image} className={'h-full w-full object-cover rounded-lg'}></img>
+                    </div>
                 </div>
             </div>}
         </>,document.getElementById("modal"))

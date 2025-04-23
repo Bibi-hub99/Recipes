@@ -14,7 +14,7 @@ function FoodCard(props){
                     <p>{props.name}</p>
                 </div>
                 <div className={'w-1/4 text-end'}>
-                    <button>{props.isFav ? binIcon : likeIcon}</button>
+                    <button onClick={()=>props.handleFavorite(props.id)}>{props.isFav ? binIcon : likeIcon}</button>
                 </div>
             </div>
         </div>
