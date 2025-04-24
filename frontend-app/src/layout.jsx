@@ -1,5 +1,5 @@
 import NavBar from './components/navbar'
-import {Outlet,useNavigate} from 'react-router-dom'
+import {Outlet,useNavigate,useLocation,useMatch} from 'react-router-dom'
 import {useState,useEffect} from "react"
 
 
@@ -7,33 +7,25 @@ function LayOut(){
 
     const [searchText,setSearchText] = useState("")
     const [searchTerm,setSearchTerm] = useState("")
+    const location = useLocation()
 
+    useEffect(()=>{
+        if(location.pathname !== "/search-results"){
+            setSearchText("")
+        }
+    },[location.pathname])
+    
     const handleSearchText = (evt)=>{
         const {value} = evt.target;
         setSearchText(value)
     }
 
-    const handleSearchTerm = async(evt)=>{
-        evt.preventDefault()
-        setSearchTerm(searchText)
-    }
-
     const navigate = useNavigate()
 
-    useEffect(()=>{
-
-        const searchMenu = ()=>{
-            /*try{
-
-            }*/
-            navigate(`/search-results?searchTerm=${searchTerm}`)
-        }
-
-        if(searchTerm){
-            searchMenu()
-        }
-
-    },[searchTerm])
+    const handleSearchTerm = async(evt)=>{
+        evt.preventDefault()
+        navigate(`/search-results?searchTerm=${searchText}`)
+    }
 
     return (
         <div>

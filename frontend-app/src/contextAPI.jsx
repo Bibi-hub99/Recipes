@@ -36,6 +36,23 @@ const sharedValues = {
             title:'Favorites',
             url:'favorites'
         }
+    ],
+    accountLinks:[
+        {
+            id:1,
+            title:'recent purchases',
+            url:'recent-purchases'
+        },
+        {
+            id:2,
+            title:'messages',
+            url:'messages'
+        },
+        {
+            id:3,
+            title:'favorites',
+            url:'favorites'
+        }
     ]
 }
 

@@ -6,6 +6,7 @@ import SuspenseFallBack from "./components/SuspenseFallback"
 import {fetchMeals} from "./http/requests"
 const LazyMenu = lazy(()=>import("./pages/menu"))
 const LazySearchResults = lazy(()=>import("./pages/search-results"))
+const LazyFavorites = lazy(()=>import("./pages/favorites"))
 
 const routes = createBrowserRouter([
     {
@@ -30,6 +31,14 @@ const routes = createBrowserRouter([
                 element:(
                     <Suspense fallback={<SuspenseFallBack/>}>
                         <LazySearchResults/>
+                    </Suspense>
+                )
+            },
+            {
+                path:'favorites',
+                element:(
+                    <Suspense fallback={<SuspenseFallBack/>}>
+                        <LazyFavorites/>
                     </Suspense>
                 )
             }
