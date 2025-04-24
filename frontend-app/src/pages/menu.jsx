@@ -11,7 +11,7 @@ function Menu(){
     const {mobileWidth,favorites} = useMyContext()
     const menuStyling = `${mobileWidth} mt-20`
     const [mealMenu,setMealMenu] = useState([])
-    const [myFavorites,setMyFavorites] = useState(favorites || [])
+    const [myFavorites,setMyFavorites] = useState(JSON.parse(localStorage.getItem("favorites")) || [])
 
     const [viewImage,setViewImage] = useState(false)
     const [mealImage,setMealImage] = useState({})

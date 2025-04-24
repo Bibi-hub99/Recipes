@@ -14,7 +14,7 @@ function SearchResults(){
     const [mySearchParams,setMySearchParams] = useSearchParams()
     const [mealMenu,setMealMenu] = useState([])
     const [isLoading,setIsLoading] = useState(true)
-    const [myFavorites,setMyFavorites] = useState(favorites || [])
+    const [myFavorites,setMyFavorites] = useState(JSON.parse(localStorage.getItem("favorites")) || [])
     const [viewImage,setViewImage] = useState(false)
     const [mealImage,setMealImage] = useState({})
     const [likedClicked,setLikedClicked] = useState(false)

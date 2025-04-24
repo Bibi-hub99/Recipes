@@ -15,7 +15,7 @@ function NavBar(props){
             <div className={navBarStyle}>
 
                 <div className={'md:hidden'}>
-                    <button className={'text-2xl block'}><FaBars className={''}/></button>
+                    <button className={'text-2xl block'} onClick={()=>props.showSlideMenu('100','50')}><FaBars className={''}/></button>
                 </div>
 
                 <div className={'ml-2'}>
