@@ -1,4 +1,4 @@
-import {NavLink,Outlet,ScrollRestoration} from "react-router-dom"
+import {NavLink,Outlet} from "react-router-dom"
 import {useMyContext} from "../contextAPI"
 
 function About(){

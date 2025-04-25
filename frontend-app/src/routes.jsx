@@ -142,6 +142,10 @@ const routes = createBrowserRouter([
                 ]
             }
         ]
+    },
+    {
+        path:'*',
+        element:<h1 className={'text-3xl'}>404 ERROR Page not Found</h1>
     }
 ])
 
