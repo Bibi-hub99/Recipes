@@ -5,3 +5,5 @@ step2 = once you are in the see more page click the heart icon to go your favori
 step3 = you should now see the meals you added as favorites,click it's image and you will be navigated to the meat specifically.
 step4 = click on original recipe link below meal image.
 step5 = congrats you just found the recipe of the meal you like🎉🎉.
+
+live app = https://cooking-geek.netlify.app
